@@ -1,9 +1,41 @@
 :root {
     --dark: #333;
     --light: #dedede;
+    --green: hsl(120, 100%, 50%);
+    --green-light: greenyellow;
+    --yellow: yellow;
 }
 
 body {
     background-color: var(--dark);
     color: var(--light);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+main ul {
+    list-style: '\26A1' outside;
+    padding-left: 1rem;
+    margin: 0;
+}
+
+main header {
+    font-weight: 300;
+    margin: 1rem 0;
+}
+
+main a {
+    color: var(--green);
+    text-decoration: none;
+}
+
+main a:hover{
+    color: var(--green-light);
+}
+
+main a:visited {
+    color: var(--yellow);
 }

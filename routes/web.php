@@ -13,5 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', '\App\Http\Controllers\BlogController@index')
+Route::get('/', '\App\Http\Controllers\PostController@index')
     ->name('home');
+
+Route::resource('post', '\App\Http\Controllers\PostController')
+    ->except(['index']);
