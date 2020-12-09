@@ -8,4 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'title',
+        'content'
+    ];
+
+    public function author()
+    {
+        return $this->belongsTo('App\Models\User', 'user_email', 'email');
+    }
 }
